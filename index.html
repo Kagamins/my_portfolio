@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammad Hadi | Full-Stack Developer Portfolio</title>
+ <script src="script.js" ></script>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              800: '#0c4a6e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+  <!-- Top Navigation Bar (Fixed for smooth navigation) -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Personalized Name & Home Link -->
+        <div class="flex items-center space-x-3">
+          <a href="#home" title="Go to Home" class="p-2 rounded-lg bg-sky-50 text-brand-600 hover:bg-brand-100 transition-colors flex items-center justify-center">
+            <i class="fa-solid fa-house text-lg"></i>
+          </a>
+          <a href="#home" class="text-xl font-bold text-slate-900 tracking-tight hover:text-brand-600 transition-colors">
+            Mohammad Hadi
+          </a>
+        </div>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+          <a href="#about" class="nav-hover-link text-slate-700">About Me</a>
+          <a href="#skills" class="nav-hover-link text-slate-700">Skills</a>
+          <a href="#projects" class="nav-hover-link text-slate-700">Projects</a>
+          <a href="#recommendations" class="nav-hover-link text-slate-700">Recommendations</a>
+          <a href="#contact" class="px-4 py-2 rounded-full bg-brand-600 text-white font-semibold hover:bg-brand-700 transition shadow-sm">Get in Touch</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex md:hidden">
+          <button id="mobile-menu-btn" type="button" aria-label="Toggle Navigation Menu" class="p-2 rounded-md text-slate-600 hover:text-brand-600 hover:bg-slate-100 focus:outline-none">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 bg-white px-4 pt-2 pb-4 space-y-2">
+      <a href="#about" class="nav-hover-link block py-2 text-slate-700 font-medium">About Me</a>
+      <a href="#skills" class="nav-hover-link block py-2 text-slate-700 font-medium">Skills</a>
+      <a href="#projects" class="nav-hover-link block py-2 text-slate-700 font-medium">Projects</a>
+      <a href="#recommendations" class="nav-hover-link block py-2 text-slate-700 font-medium">Recommendations</a>
+      <a href="#contact" class="block py-2 text-brand-600 font-semibold">Contact</a>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-grow">
+    
+    <!-- Hero / About Me Section -->
+    <section id="home" class="pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-sky-50/70 via-white to-slate-50">
+      <div id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+          
+          <!-- Avatar & Badge -->
+          <div class="flex-shrink-0 flex flex-col items-center">
+            <div class="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full p-1.5 ring-4 ring-brand-500/20 shadow-xl bg-white overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" 
+                alt="Mohammad Hadi profile" 
+                class="w-full h-full object-cover rounded-full"
+                onerror="this.src='https://placehold.co/400x400/0284c7/ffffff?text=Mohammad+Hadi"
+              >
+            </div>
+            <div class="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-semibold">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              Available for New Opportunities
+            </div>
+          </div>
+
+          <!-- Bio & Introduction Summary -->
+          <div class="text-center lg:text-left space-y-5 max-w-2xl">
+            <span class="inline-block text-brand-600 font-semibold text-sm tracking-wider uppercase bg-brand-50 px-3 py-1 rounded-md border border-brand-100">
+              Full-Stack Software Engineer
+            </span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+              Hi, I'm <span class="text-brand-600">Mohammad Hadi</span>
+            </h1>
+            <p class="text-lg text-slate-600 leading-relaxed">
+              I am a results-driven developer specializing in building modern web applications, distributed APIs, and scalable front-end experiences. With a keen focus on performance, accessibility, and intuitive user interfaces, I transform complex architectural challenges into clean, maintainable software solutions.
+            </p>
+            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <a href="#projects" class="px-6 py-3 rounded-lg bg-brand-600 text-white font-medium hover:bg-brand-700 transition shadow-md hover:shadow-lg">
+                View My Projects
+              </a>
+              <a href="#recommendations" class="px-6 py-3 rounded-lg bg-white border border-slate-300 text-slate-700 font-medium hover:bg-slate-50 transition shadow-sm">
+                Client Recommendations
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section: Exactly 5 Skills Displayed as Cards -->
+    <section id="skills" class="py-20 bg-white border-y border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl tracking-tight">Technical Skills</h2>
+          <div class="h-1 w-16 bg-brand-500 mx-auto mt-3 rounded-full"></div>
+          <p class="mt-4 text-slate-600 text-base">
+            Core technologies and frameworks I use to engineer robust end-to-end digital solutions.
+          </p>
+        </div>
+
+        <!-- 5 Skill Cards Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+          
+          <!-- Skill 1: HTML/CSS -->
+          <div class="card-transition bg-slate-50 border border-slate-200/80 rounded-2xl p-6 text-center flex flex-col items-center justify-center shadow-sm">
+            <div class="w-16 h-16 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center mb-4 text-3xl">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-lg">HTML / CSS</h3>
+            <p class="text-xs text-slate-500 mt-2 font-medium">Semantic Web & Responsive Layouts</p>
+          </div>
+
+          <!-- Skill 2: JavaScript -->
+          <div class="card-transition bg-slate-50 border border-slate-200/80 rounded-2xl p-6 text-center flex flex-col items-center justify-center shadow-sm">
+            <div class="w-16 h-16 rounded-xl bg-amber-100 text-amber-500 flex items-center justify-center mb-4 text-3xl">
+              <i class="fa-brands fa-js"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-lg">JavaScript</h3>
+            <p class="text-xs text-slate-500 mt-2 font-medium">ES6+, DOM & Async Logic</p>
+          </div>
+
+          <!-- Skill 3: React -->
+          <div class="card-transition bg-slate-50 border border-slate-200/80 rounded-2xl p-6 text-center flex flex-col items-center justify-center shadow-sm">
+            <div class="w-16 h-16 rounded-xl bg-cyan-100 text-cyan-500 flex items-center justify-center mb-4 text-3xl">
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-lg">React</h3>
+            <p class="text-xs text-slate-500 mt-2 font-medium">Components, Hooks & State Flow</p>
+          </div>
+
+          <!-- Skill 4: Node.js -->
+          <div class="card-transition bg-slate-50 border border-slate-200/80 rounded-2xl p-6 text-center flex flex-col items-center justify-center shadow-sm">
+            <div class="w-16 h-16 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mb-4 text-3xl">
+              <i class="fa-brands fa-node-js"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-lg">Node.js</h3>
+            <p class="text-xs text-slate-500 mt-2 font-medium">REST APIs & Server Architecture</p>
+          </div>
+
+          <!-- Skill 5: Python -->
+          <div class="card-transition bg-slate-50 border border-slate-200/80 rounded-2xl p-6 text-center flex flex-col items-center justify-center shadow-sm">
+            <div class="w-16 h-16 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 text-3xl">
+              <i class="fa-brands fa-python"></i>
+            </div>
+            <h3 class="font-bold text-slate-900 text-lg">Python</h3>
+            <p class="text-xs text-slate-500 mt-2 font-medium">Data Processing & Scripting</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section: 3 Distinct Cards -->
+    <section id="projects" class="py-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl tracking-tight">Featured Projects</h2>
+          <div class="h-1 w-16 bg-brand-500 mx-auto mt-3 rounded-full"></div>
+          <p class="mt-4 text-slate-600 text-base">
+            Recent engineering projects showcasing full-stack capabilities, API integrations, and intuitive UX.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Project 1 -->
+          <div class="card-transition bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+            <div class="h-48 bg-slate-200 overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=700&q=80" 
+                alt="E-Commerce Platform" 
+                class="w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/600x400/0369a1/ffffff?text=E-Commerce+Hub'"
+              >
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-xs font-semibold px-2.5 py-1 rounded-md text-slate-700 shadow-sm">
+                Full-Stack
+              </div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">CloudCommerce Hub</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                  A high-volume online marketplace with real-time inventory synchronization, dynamic cart state management, and Stripe checkout integration.
+                </p>
+              </div>
+              <div>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-cyan-50 text-cyan-700 border border-cyan-200">React</span>
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">Node.js</span>
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-slate-100 text-slate-700 border border-slate-200">MongoDB</span>
+                </div>
+                <a href="#projects" class="text-brand-600 font-semibold text-sm hover:text-brand-700 inline-flex items-center gap-1">
+                  View Case Study <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="card-transition bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+            <div class="h-48 bg-slate-200 overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80" 
+                alt="Analytics Dashboard" 
+                class="w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/600x400/0284c7/ffffff?text=Analytics+Engine'"
+              >
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-xs font-semibold px-2.5 py-1 rounded-md text-slate-700 shadow-sm">
+                Data & Web
+              </div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">OmniPulse Analytics</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                  An analytics monitoring platform with interactive metric charts, scheduled automated ETL data pipelines, and role-based client workspaces.
+                </p>
+              </div>
+              <div>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-blue-50 text-blue-700 border border-blue-200">Python</span>
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-amber-50 text-amber-700 border border-amber-200">JavaScript</span>
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-sky-50 text-sky-700 border border-sky-200">Tailwind</span>
+                </div>
+                <a href="#projects" class="text-brand-600 font-semibold text-sm hover:text-brand-700 inline-flex items-center gap-1">
+                  View Case Study <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="card-transition bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden flex flex-col">
+            <div class="h-48 bg-slate-200 overflow-hidden relative">
+              <img 
+                src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?auto=format&fit=crop&w=700&q=80" 
+                alt="Agile Task Suite" 
+                class="w-full h-full object-cover"
+                onerror="this.src='https://placehold.co/600x400/0369a1/ffffff?text=Task+Manager'"
+              >
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-xs font-semibold px-2.5 py-1 rounded-md text-slate-700 shadow-sm">
+                Productivity
+              </div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">SyncTask Agile Suite</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                  Collaborative kanban and roadmap management application featuring drag-and-drop mechanics, instant notifications, and team chat channels.
+                </p>
+              </div>
+              <div>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-cyan-50 text-cyan-700 border border-cyan-200">React</span>
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">Express API</span>
+                  <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200">Socket.IO</span>
+                </div>
+                <a href="#projects" class="text-brand-600 font-semibold text-sm hover:text-brand-700 inline-flex items-center gap-1">
+                  View Case Study <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section id="recommendations" class="py-20 bg-white border-t border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl tracking-tight">Recommendations</h2>
+          <div class="h-1 w-16 bg-brand-500 mx-auto mt-3 rounded-full"></div>
+          <p class="mt-4 text-slate-600 text-base">
+            Endorsements and testimonials from colleagues, mentors, and project leaders.
+          </p>
+        </div>
+
+        <!-- Recommendations Dynamic List (Default: 3 Cards) -->
+        <div id="recommendations-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          
+          <!-- Recommendation 1 -->
+          <div class="recommendation-card card-transition bg-slate-50 border border-slate-200 rounded-2xl p-6 relative flex flex-col justify-between shadow-sm">
+            <div class="mb-4">
+              <i class="fa-solid fa-quote-left text-brand-500 text-2xl mb-3 block opacity-60"></i>
+              <p class="text-slate-700 italic text-sm leading-relaxed">
+                "Mohammad is an outstanding full-stack developer who consistently delivers high-impact web software on schedule. His mastery of clean JavaScript and component design was a major asset to our engineering sprint."
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200/80">
+              <h4 class="font-bold text-slate-900 text-base">Sarah Jenkins</h4>
+              <p class="text-xs text-brand-600 font-medium">Engineering Manager, Apex Tech</p>
+            </div>
+          </div>
+
+          <!-- Recommendation 2 -->
+          <div class="recommendation-card card-transition bg-slate-50 border border-slate-200 rounded-2xl p-6 relative flex flex-col justify-between shadow-sm">
+            <div class="mb-4">
+              <i class="fa-solid fa-quote-left text-brand-500 text-2xl mb-3 block opacity-60"></i>
+              <p class="text-slate-700 italic text-sm leading-relaxed">
+                "Mohammads ability to take intricate data problems and transform them into clean, accessible user interfaces is exceptional. He communicates clearly and collaborates effortlessly across teams."
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200/80">
+              <h4 class="font-bold text-slate-900 text-base">Marcus Vance</h4>
+              <p class="text-xs text-brand-600 font-medium">Lead Solutions Architect, CloudScale</p>
+            </div>
+          </div>
+
+          <!-- Recommendation 3 -->
+          <div class="recommendation-card card-transition bg-slate-50 border border-slate-200 rounded-2xl p-6 relative flex flex-col justify-between shadow-sm">
+            <div class="mb-4">
+              <i class="fa-solid fa-quote-left text-brand-500 text-2xl mb-3 block opacity-60"></i>
+              <p class="text-slate-700 italic text-sm leading-relaxed">
+                "Working alongside Mohammad during our hackathons and product redesigns has been inspiring. His thoroughness with testing and commitment to clean code standards is truly commendable."
+              </p>
+            </div>
+            <div class="pt-4 border-t border-slate-200/80">
+              <h4 class="font-bold text-slate-900 text-base">Elena Rostova</h4>
+              <p class="text-xs text-brand-600 font-medium">Senior Frontend Engineer, DevHub</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Add Recommendation Form -->
+        <div id="contact" class="max-w-2xl mx-auto bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow-sm">
+          <div class="mb-6">
+            <h3 class="text-2xl font-bold text-slate-900">Leave a Recommendation</h3>
+            <p class="text-sm text-slate-600 mt-1">Have we worked together? Share your thoughts or feedback below.</p>
+          </div>
+
+          <form id="recommendation-form" class="space-y-4">
+            <div>
+              <label for="rec-name" class="block text-sm font-semibold text-slate-700 mb-1">Your Name *</label>
+              <input 
+                type="text" 
+                id="rec-name" 
+                required 
+                placeholder="e.g. Jordan Smith"
+                class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition bg-white text-slate-800 text-sm"
+              >
+            </div>
+
+            <div>
+              <label for="rec-designation" class="block text-sm font-semibold text-slate-700 mb-1">Relationship / Designation *</label>
+              <input 
+                type="text" 
+                id="rec-designation" 
+                required 
+                placeholder="e.g. Senior Product Manager, Acme Corp"
+                class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition bg-white text-slate-800 text-sm"
+              >
+            </div>
+
+            <div>
+              <label for="rec-message" class="block text-sm font-semibold text-slate-700 mb-1">Recommendation / Testimonial *</label>
+              <textarea 
+                id="rec-message" 
+                rows="4" 
+                required 
+                placeholder="Write your recommendation here..."
+                class="w-full px-4 py-2.5 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition bg-white text-slate-800 text-sm"
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit" 
+              class="w-full sm:w-auto px-8 py-3 rounded-lg bg-brand-600 text-white font-semibold hover:bg-brand-700 focus:ring-4 focus:ring-brand-500/30 transition shadow-md flex items-center justify-center gap-2"
+            >
+              <i class="fa-solid fa-paper-plane text-sm"></i>
+              Submit Recommendation
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div>
+        <p class="text-sm font-medium text-slate-300">Mohammad Hadi &bull; Full-Stack Portfolio</p>
+        
+      </div>
+      
+      <!-- Social links -->
+      <div class="flex items-center space-x-6 text-lg">
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="text-slate-400 hover:text-white transition">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="text-slate-400 hover:text-white transition">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile" class="text-slate-400 hover:text-white transition">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="#home" title="Back to top" class="text-slate-400 hover:text-brand-400 transition ml-2">
+          <i class="fa-solid fa-circle-chevron-up text-xl"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Popup Modal (Only triggers on recommendation form submission) -->
+  <div id="confirmation-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm hidden transition-opacity">
+    <div class="bg-white rounded-2xl shadow-2xl border border-slate-200 max-w-md w-full p-6 text-center transform scale-95 transition-all" id="modal-card">
+      <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4 text-3xl">
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h3 class="text-2xl font-bold text-slate-900 mb-2">Thank You!</h3>
+      <p class="text-slate-600 text-sm mb-6">
+        Your recommendation has been submitted successfully and added to the portfolio.
+      </p>
+      <button 
+        type="button" 
+        id="modal-close-btn"
+        class="w-full py-2.5 px-4 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-lg shadow transition focus:ring-4 focus:ring-brand-500/30"
+      >
+        Close &amp; View
+      </button>
+    </div>
+  </div>
+
+  
+</body>
+</html>
